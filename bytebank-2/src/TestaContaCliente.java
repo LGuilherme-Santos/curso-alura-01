@@ -21,6 +21,8 @@ public class TestaContaCliente {
 		minhaConta.setTitular(cliente);
 		System.out.println("Titular da conta agora é " + minhaConta.getTitular().getNome());
 		
+		System.out.println("Profissão: " + minhaConta.getTitular().getProfissao());
+		
 	}
 
 }
