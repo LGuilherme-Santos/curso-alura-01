@@ -4,14 +4,22 @@ public class TestaContaCliente {
 	public static void main(String[] args) {
 		
 		Conta minhaConta = new Conta();
-		minhaConta.titular = new Cliente();
+		Cliente cliente = new Cliente();
 		
-		minhaConta.titular.nome = "Guilherme";
+		cliente.setNome("Guilherme");
 		
-		System.out.println("Titular da conta é " + minhaConta.titular.nome);
+		minhaConta.setTitular(cliente);
+		
+		System.out.println("Titular da conta é " + minhaConta.getTitular().getNome());
 		
 		minhaConta.deposita(500);
 		System.out.println("Saldo da conta: " + minhaConta.getSaldo());
+		
+		minhaConta.getTitular().setProfissao("Programador");
+		
+		cliente.setNome("Gui");
+		minhaConta.setTitular(cliente);
+		System.out.println("Titular da conta agora é " + minhaConta.getTitular().getNome());
 		
 	}
 
